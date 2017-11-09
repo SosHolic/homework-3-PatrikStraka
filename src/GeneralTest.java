@@ -16,8 +16,9 @@ class Test1 extends GeneralTest {
         int count = test.getCount();
         GeneralTest generalTest = new Test1();
         count += generalTest.getCount();
+
         generalTest = new GeneralTest();
-        count += generalTest.getCount();
-        System.out.println(count);
+        count += generalTest.getCount(); // 3 krát bola zavolaná metoda getCount
+        System.out.println(count); //  vypíše to 21
     }
 }
